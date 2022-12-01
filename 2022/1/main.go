@@ -14,11 +14,11 @@ type ElfWithBag struct {
 }
 
 func main() {
-	file, _ := os.Open("./d1/input.txt")
+	file, _ := os.Open("./2022/1/input.txt")
 	defer func(file *os.File) {
 		err := file.Close()
 		if err != nil {
-			fmt.Println("oops, could not read the file")
+			fmt.Println("oops")
 		}
 	}(file)
 
@@ -61,4 +61,7 @@ func main() {
 	for counter := 0; counter < 3; counter++ {
 		sumOfFirstThree += hordeOfElves[counter].caloriesCount
 	}
+
+	fmt.Printf("Highest calories count is from Elf number %d with %d calories\n", hordeOfElves[0].number, hordeOfElves[0].caloriesCount)
+	fmt.Printf("Sum of three highest calories is %d\n", sumOfFirstThree)
 }

@@ -14,7 +14,7 @@ type ElfWithBag struct {
 }
 
 func main() {
-	file, _ := os.Open("./2022/1/input.txt")
+	file, _ := os.Open("input.txt")
 	defer func(file *os.File) {
 		err := file.Close()
 		if err != nil {
